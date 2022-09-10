@@ -17,6 +17,7 @@ button{
     color: var(--primary-key-color);
 }
 
+/* The css class stylings are arranged alphabetically, so if you are looking for a specific class go with the alphabetic order  */
 .attribution { 
         font-size: 11px; text-align: center; 
 }
@@ -31,21 +32,7 @@ button{
     gap: 1em;
 }
 
-.calc-screen{
-    height: 100px;
-    background-color: var(--screen-color);
-    align-self: stretch;
-    grid-column: 1/3;
-    border-radius: 15px;
-}
 
-.container{
-    width: 40%;
-    min-width:375px;
-    margin: 50px auto;
-    display: flex;
-    flex-direction: column;
-}
 
 .btn-highlight-key{
     background-color: var(--key-color);
@@ -58,11 +45,41 @@ button{
 }
 
 
+.calc-btn{
+    color: white;
+    background-color: var(--toggle-color);
+    box-shadow:  0 5px var(--toggle-color-shadow);
+}
+
+.calc-btn:hover{
+    background-color: var(--toggle-hover-color);
+}
+
+/* This is the styling for the div that holds the calc screen - background color and height */
+.calc-screen{
+    height: 100px;
+    background-color: var(--screen-color);
+    align-self: stretch;
+    grid-column: 1/3;
+    border-radius: 15px;
+}
+
+/* Keeps the calculator contained in the center and reponsive */
+.container{
+    width: 40%;
+    min-width:375px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+}
+
 .heading{
     font-weight: bold;
     align-self:baseline;
 }
 
+
+/* This is the grid that holds all the main operator keys */
 .main-calc-grid{
     background-color: var(--primary-key-background-color);
     display: grid;
@@ -95,7 +112,7 @@ button{
 
 
 
-/* Theme toggling btns */
+/* These are the radio btns used for the theme selection - Theme toggling btns */
 .radio-group{
     display: inline-flex;
     background-color: var(--primary-key-background-color);
@@ -121,14 +138,14 @@ button{
 }
 
 
-.calc-btn{
-    color: white;
-    background-color: var(--toggle-color);
-    box-shadow:  0 5px var(--toggle-color-shadow);
-}
-
-.calc-btn:hover{
-    background-color: var(--toggle-hover-color);
+/* This is the styling applied on the calculator screen */
+#screen-display{
+    color: var(--primary-text-color);
+    font-size: 3em;
+    font-family: inherit;
+    text-align: end;
+    align-self: flex-end;
+    padding-right: 15px;
 }
 
 /* This is just a simple css to transform text to upper case */
@@ -154,15 +171,6 @@ p.text-uppercase{
     grid-template-columns: 1fr 1fr;
     margin-bottom: 1em;
     justify-content: baseline;
-}
-
-#screen-display{
-    color: var(--primary-text-color);
-    font-size: 3em;
-    font-family: inherit;
-    text-align: end;
-    align-self: flex-end;
-    padding-right: 15px;
 }
 
 .title{

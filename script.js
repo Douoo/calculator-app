@@ -5,6 +5,7 @@ const currentTheme = localStorage.getItem('theme')||getDefaultTheme();
 const operatorBtns=document.querySelectorAll('button');
 let screenDisplay=document.getElementById("screen-display");
 
+//If there are no theme saved on the currentTheme it selects one based on the users choice
 function getDefaultTheme(){
     if(window.matchMedia('(prefers-color-scheme: light').matches){
         return 'light';
@@ -17,7 +18,7 @@ function getDefaultTheme(){
 
 console.log('Theme = '+currentTheme)
 
-
+//This is the function that initialized the theme
 function initTheme(){
     
 
@@ -36,10 +37,10 @@ function initTheme(){
 
 initTheme();
 
+//Activates the theme 
 function activateTheme(themeMode){
     themeStyle.setAttribute('href', `css/themes/${themeMode}.css`);
 
-    // document.getElementById(currentTheme).value=currentTheme;
 }
 
 
@@ -50,12 +51,16 @@ for(let i=0; i<operatorBtns.length;i++){
     })
 }
 
+//A function to listen to keypress and make sure only valid keys are accepted on the scree
+
 document.addEventListener('keypress',function(event){
     if ((event.keyCode >= 42 && event.keyCode <=57) || event.keyCode === 13) {
         evaluate(event.key)
       } 
 })
 
+
+//This is the method that does all the work related to calculating values
 
 function evaluate(input){
     switch(input){
