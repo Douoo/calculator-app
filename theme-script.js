@@ -14,7 +14,6 @@ function getThemePreference () {
       ? 'dark'
       : 'light';
 }
-console.log('aaa')
 
 function setPreference () {
   localStorage.setItem(preferredTheme, theme.value)
@@ -32,7 +31,6 @@ window.onload = () => {
     
 toggleBtns.forEach(button=>{
     button.addEventListener("change", (event) => {
-        console.log('aa');
         theme.value = event.target.value
         setPreference()
       })
