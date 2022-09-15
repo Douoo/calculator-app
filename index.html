@@ -1,92 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Calculator app</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
-
-
-<link rel="stylesheet" href="css/themes/dark.css" id="themeStyle" media="(prefers-color-scheme: dark)">
-
-<link rel="stylesheet" href="css/themes/light.css" class="themeStyle" media="(prefers-color-scheme: light)">
-
-
-<link rel="stylesheet" href="css/themes/no-preference-theme.css" class="themeStyle" media="(prefers-color-scheme: no-preference)"> 
-  <link rel="stylesheet" href="css/styles.css">
- 
+    <title>Frontend Mentor | Calculator app</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    
 </head>
 <body>
-
-  <main class="container">
-    <div class="top-calc-screen">
-        <div class="title">
-          <h1 class="heading">calc</h1>
-        <p class="text-uppercase">Theme</p>
-          <div class="toggle-btn-group">
-            <div class="num">
-              <p>1</p>
-              <p>2</p>
-              <p>3</p>
-             </div>
-              <div class="radio-group">
-                <input class="radio-btn" type="radio" name="theme-btn" value="dark" id="dark" checked>
-                <label class="radio-label" for="dark"></label>
-                <input class="radio-btn" type="radio" name="theme-btn" value="light" id="light">
-                <label class="radio-label" for="light"></label>
-                <input class="radio-btn" type="radio" name="theme-btn" value="no-preference-theme" id="no-preference-theme">
-                <label class="radio-label" for="no-preference-theme"></label>
-              
-          </div>
-          </div>
-      
+    <main class="container">
+        <div class="header">
+            <h1>calc</h1>
+           
+            <div class="radio-group">
+                <h2 class="theme-header">THEME</h2>
+                <div class="label-wrapper">
+                    <label for="dark-theme">1</label>
+                    <label for="light-theme">2</label>
+                    <label for="">3</label>
+                </div>
+                <div class="theme-switch-wrapper">
+                    <span class="theme-switch">
+                        <input data-theme type="radio" name="theme" id="dark" value="dark" checked>
+                        <input data-theme type="radio" name="theme" id="light" value="light">
+                        <input data-theme type="radio" name="theme" id="purple" value="purple">
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="output">
+            <div data-previous-operand class="previousOperandTextElement"></div>
+            <div data-current-operand class="currentOperandTextElement"></div>
+        </div>
+        <div class="nested-calculator-grid">
+            <button data-number>7</button>
+        <button data-number>8</button>
+        <button data-number>9</button>
+        <button data-delete class="highlight-button">DEL</button>
+        <button data-number>4</button>
+        <button data-number>5</button>
+        <button data-number>6</button>
+        <button data-operation>+</button>
+        <button data-number>1</button>
+        <button data-number>2</button>
+        <button data-number>3</button>
+        <button data-operation>-</button>
+        <button data-number>.</button>
+        <button data-number>0</button>
+        <button data-operation>/</button>
+        <button data-operation>x</button>
+        <button data-reset class="span-two highlight-button">RESET</button>
+        <button data-compute class="span-two key-highlight-btn">=</button>
         </div>
         
-      <div class="calc-screen">
-        <h1 id="screen-display"></h1>
-      </div>
-    </div>
-    <div class="main-calc-grid">
-      <button class="operand" id="9">9</button>
-      <button class="operand" id="8">8</button>
-      <button class="operand" id="7">7</button>
       
-      <button class="btn-highlight-key text-uppercase " id="del-button">del</button>
-     
-      <button class="operand" id="6">6</button>
-      <button class="operand" id="5">5</button>
-      <button class="operand" id="4">4</button>
-      <button class="operand" id="+">+</button>
-      
-      <button class="operand" id="3">3</button>
-      <button class="operand" id="2">2</button>
-      <button class="operand" id="1">1</button>
-      <button class="operand" id="-">-</button>
-     
-      
-      <button class="operand" id=".">.</button>
-      <button class="operand" id="0">0</button>
-      
-      <button class="operand" id="/">/</button>
-      <button class="operand" id="*">x</button>
-      <div class="bottom-calc-grid">
-        <button class="btn-highlight-key text-uppercase ">Reset</button>
-        <button class="calc-btn">=</button>
-      </div>
-    </div>
-   
-  </main>
-  
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Douoo</a>.
-  </div> -->
+    </main>
+<!-- 
+    <footer class="footer">
+        <div class="attribution">
+            <span>
+                Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+                Coded by <a href="https://www.frontendmentor.io/profile/Douoo">Douoo</a>.
+            </span>
+        </div>
+    </footer>
+     -->
+ 
+    
 
-  <script src="script.js"></script>
+    <script src="theme-script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

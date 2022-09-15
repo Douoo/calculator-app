@@ -29,10 +29,14 @@ Users should be able to:
 The default theme of the website is based on the current user OS theme choice. If its dark, then the theme will be set to dark, if its light, light theme will be applied. However, if the user is using a custom theme, it will go with no-preference-theme (the third theme).
 ![](./screenshot.jpg)
 
-Here are the previews(screenshots) of these themes.
-![Dark Mode Theme](design/desktop-design-theme-1.jpg)
-![Light Mode Theme](design/desktop-design-theme-2.jpg)
-![Custom Theme](design/desktop-design-theme-3.jpg)
+Here are the previews(screenshots) of the themes.
+<h1>Mobile view - dark and light</h1>
+<div>
+  <img width=400px src="calc_app-mobile_view.png">
+  <img width=400px src="calc_app-mobile_view%20%5Blight_mode%5D.png">
+</div>
+
+![Light Mode Theme](calc_app-web_view.png)
 
 ### Links
 
@@ -53,15 +57,18 @@ Here are the previews(screenshots) of these themes.
 - Vanilla JavaScript
 
 
-### What do you need to know to make this? 
+### What I learned
 
-You can build this with any frontend language that you're comfortable with but you'll need to know the basics of css grid, and I also recommend you understand how to make a custom theme selector
+This is my first time building a calculator app but I have to say, I learned lots of useful css features like css grid, prefers-color-theme and building custom theme selector for your website. Moreover, I was able to practice my javascript skill like using JS classes. 
+I learned the basics of CSS grid from the traversy media on youtube(link below). It helped me grasp the concept of CSS grids. Additional to that, I also learned how we can use prefers-color-scheme for theme setup.
+
+Summarizing what I learned, you can build this with any frontend language that you're comfortable with but you'll need to know the basics of css grid, and I also recommend you understand how to make a custom theme selector. Moreover, I recommend you be familiar with the use javascript OOP concept like using classes.
 
 
 ### Useful resources
 - [CSS Grid Tutorial Video](https://www.youtube.com/watch?v=jV8B24rSN5o) - This is an amazing tutorial by travery media which helped me get a concrete basic understanding of css grid.
 - [Usage of Prefers-color-theme](https://web.dev/prefers-color-scheme/) - This is an amazing article helped understand the historical background and theory of dark mode in addition to how to use the prefers-color-theme css feature. I'd recommend it to anyone still learning the prefers-color-scheme.
-
+- [Build A Calculator With JavaScript Tutorial](https://www.youtube.com/watch?v=j59qQ7YWLxw) - Web Dev Simplified's calculator tutorial, this gave me a strong foundation for rebuilding my calculator app additionally reminding me to use a class based approach for certain devlopment approach.
 
 
 ## Author
